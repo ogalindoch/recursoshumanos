@@ -1,0 +1,25 @@
+{
+	"name"	: "euroglas/recursoshumanos",
+	"type"	: "library",
+	"description"	: "Modulo de Recursos Humanos, para EUROGLAS",
+	"keywords"	: ["recursoshumanos","rh","rest","euroglas"],
+	"homepage":	"http://euroglas.net",
+	"license":	"agpl-3.0",
+	"authors": [{
+			"name": "Octavio Galindo",
+			"email": "Octavio@euroglas.net",
+			"role": "Developer"
+	}],
+    "require": {
+		"euroglas/dbaccess": "dev-main",
+		"euroglas/authkey" : "dev-main"
+    },
+	"require-dev": {
+		"euroglas/eurorest": "dev-main"
+	},
+	"autoload": {
+		"psr-4": {
+			"euroglas\\recursoshumanos\\": "src/"
+		}
+	}
+}

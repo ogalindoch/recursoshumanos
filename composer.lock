@@ -1,0 +1,276 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d30273e2ec8226b629c6d478380a78bc",
+    "packages": [
+        {
+            "name": "emarref/jwt",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/emarref/jwt.git",
+                "reference": "79f563750ff90dabd4fa677c4b4e5ec9ed52d9b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/emarref/jwt/zipball/79f563750ff90dabd4fa677c4b4e5ec9ed52d9b4",
+                "reference": "79f563750ff90dabd4fa677c4b4e5ec9ed52d9b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "ext-openssl": "Enables more token encryption options"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Emarref\\Jwt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Malcolm Fell",
+                    "email": "emarref@gmail.com"
+                }
+            ],
+            "description": "A JWT implementation",
+            "support": {
+                "issues": "https://github.com/emarref/jwt/issues",
+                "source": "https://github.com/emarref/jwt/tree/master"
+            },
+            "time": "2016-09-05T20:33:06+00:00"
+        },
+        {
+            "name": "euroglas/authkey",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ogalindoch/authkey.git",
+                "reference": "f047cf6e53c285c1fb632b1d88d726e179e4ba88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ogalindoch/authkey/zipball/f047cf6e53c285c1fb632b1d88d726e179e4ba88",
+                "reference": "f047cf6e53c285c1fb632b1d88d726e179e4ba88",
+                "shasum": ""
+            },
+            "require": {
+                "emarref/jwt": "^1.0.3"
+            },
+            "require-dev": {
+                "euroglas/eurorest": "^1.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "euroglas\\authkey\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "agpl-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Octavio Galindo",
+                    "email": "Octavio@euroglas.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Modulo de autenticación usando Llaves, para EUROGLAS",
+            "homepage": "http://euroglas.net",
+            "keywords": [
+                "auth",
+                "euroglas",
+                "rest"
+            ],
+            "support": {
+                "issues": "https://github.com/ogalindoch/authkey/issues",
+                "source": "https://github.com/ogalindoch/authkey/tree/1.0.0"
+            },
+            "time": "2021-02-26T19:17:17+00:00"
+        },
+        {
+            "name": "euroglas/dbaccess",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ogalindoch/dbaccess.git",
+                "reference": "7952b309804fbf3480a796ec1669f9291f654247"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ogalindoch/dbaccess/zipball/7952b309804fbf3480a796ec1669f9291f654247",
+                "reference": "7952b309804fbf3480a796ec1669f9291f654247",
+                "shasum": ""
+            },
+            "require-dev": {
+                "euroglas/eurorest": "^1.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "euroglas\\dbaccess\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "agpl-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Octavio Galindo",
+                    "email": "Octavio@euroglas.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Acceso a la Base de Datos, para EUROGLAS",
+            "homepage": "http://euroglas.net",
+            "keywords": [
+                "db",
+                "euroglas"
+            ],
+            "support": {
+                "issues": "https://github.com/ogalindoch/dbaccess/issues",
+                "source": "https://github.com/ogalindoch/dbaccess/tree/1.0.0"
+            },
+            "time": "2021-02-27T01:07:03+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "altorouter/altorouter",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dannyvankooten/AltoRouter.git",
+                "reference": "39c50092470128c12284d332bb57f306bb5b58e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dannyvankooten/AltoRouter/zipball/39c50092470128c12284d332bb57f306bb5b58e4",
+                "reference": "39c50092470128c12284d332bb57f306bb5b58e4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "phpunit/phpunit": "4.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "AltoRouter.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Danny van Kooten",
+                    "email": "dannyvankooten@gmail.com",
+                    "homepage": "http://dannyvankooten.com/"
+                },
+                {
+                    "name": "Koen Punt",
+                    "homepage": "https://github.com/koenpunt"
+                },
+                {
+                    "name": "niahoo",
+                    "homepage": "https://github.com/niahoo"
+                }
+            ],
+            "description": "A lightning fast router for PHP",
+            "homepage": "https://github.com/dannyvankooten/AltoRouter",
+            "keywords": [
+                "lightweight",
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/dannyvankooten/AltoRouter/issues",
+                "source": "https://github.com/dannyvankooten/AltoRouter/tree/master"
+            },
+            "time": "2015-11-30T00:47:43+00:00"
+        },
+        {
+            "name": "euroglas/eurorest",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ogalindoch/eurorest.git",
+                "reference": "c4b23957c7590ab10832ed484b5d87552610156d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ogalindoch/eurorest/zipball/c4b23957c7590ab10832ed484b5d87552610156d",
+                "reference": "c4b23957c7590ab10832ed484b5d87552610156d",
+                "shasum": ""
+            },
+            "require": {
+                "altorouter/altorouter": "^1.1.0",
+                "emarref/jwt": "^1.0.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "euroglas\\eurorest\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Octavio Galindo",
+                    "email": "Octavio@euroglas.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Servidor REST para EUROGLAS",
+            "homepage": "http://euroglas.net",
+            "keywords": [
+                "euroglas",
+                "rest",
+                "server"
+            ],
+            "support": {
+                "issues": "https://github.com/ogalindoch/eurorest/issues",
+                "source": "https://github.com/ogalindoch/eurorest/tree/main"
+            },
+            "time": "2021-02-26T01:01:59+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "euroglas/dbaccess": 20,
+        "euroglas/authkey": 20,
+        "euroglas/eurorest": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
