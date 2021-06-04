@@ -209,7 +209,26 @@ class recursoshumanos implements \euroglas\eurorest\restModuleInterface
     }
 
     public function getListaEmpresas() {
-        $query = "SELECT ID_Empresa, base,  Descripcion FROM bases";
+        $query = "SELECT ID_Empresa AS idx, ID_Empresa, Base,  Descripcion FROM bases";
+
+        $dbRH = $this->connect_db("rhn");
+
+        $sth = $dbRH->query($query);
+
+        if( $sth === false )
+        {
+            die( $dbRH->getLastError() );
+        }
+
+        //$datos = $sth->fetchAll(\PDO::FETCH_GROUP | \PDO::FETCH_UNIQUE | \PDO::FETCH_ASSOC);
+        $datos = $sth->fetchAll( \PDO::FETCH_ASSOC);
+
+
+        return $datos;
+    }
+
+    public function getArregloEmpresas() {
+        $query = "SELECT ID_Empresa AS idx, ID_Empresa, Base,  Descripcion FROM bases";
 
         $dbRH = $this->connect_db("rhn");
 
@@ -221,6 +240,8 @@ class recursoshumanos implements \euroglas\eurorest\restModuleInterface
         }
 
         $datos = $sth->fetchAll(\PDO::FETCH_GROUP | \PDO::FETCH_UNIQUE | \PDO::FETCH_ASSOC);
+        //$datos = $sth->fetchAll( \PDO::FETCH_ASSOC);
+
 
         return $datos;
     }
@@ -229,7 +250,10 @@ class recursoshumanos implements \euroglas\eurorest\restModuleInterface
 
         // Obten un arreglo con los detalles de las empresas
         // La llave del arreglo, es el idEmpresa
-        $empresas = $this->getListaEmpresas();
+        //$empresas = $this->getListaEmpresas();
+        $empresas = $this->getArregloEmpresas();
+        // print_r( array_keys( $empresas ) );
+        
 
         // Valida que el ID es valido
         if( ! array_key_exists($idEmpresa,$empresas) )
@@ -239,11 +263,12 @@ class recursoshumanos implements \euroglas\eurorest\restModuleInterface
             die(json_encode( $this->reportaErrorUsandoHateoas(
                 400001,
                 "Empresa invalida",
-                "No tengo una empresa con ID [{$idEmpresa}]"
+                "No tengo una empresa con ID [{$idEmpresa}]",
+                json_encode($empresas)
             )));
         }
 
-        $dbName = $empresas[$idEmpresa]["base"];
+        $dbName = $empresas[$idEmpresa]["Base"];
 
         //
         // Conexión a la bD adecuada
