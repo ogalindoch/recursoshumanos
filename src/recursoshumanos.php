@@ -287,6 +287,7 @@ class recursoshumanos implements \euroglas\eurorest\restModuleInterface
         $query .= "JOIN empleados e ON h.codigo = e.Codigo ";
         $query .= "JOIN departamentos d ON e.ID_Departamento = d.ID_Departamento ";
         $query .= "JOIN puestos p ON e.ID_Puesto = p.ID_Puesto ";
+        $query .= "WHERE h.FMD IS NOT NULL ";
 
         $sth = $dbRH->query($query);
 
